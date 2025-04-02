@@ -1,0 +1,2 @@
+web: rails server -p 3000
+mongodb: docker run --name mongodb -d -p 27017:27017 mongo:6
