@@ -4,9 +4,12 @@ servers:
   web:
     hosts:
       - 95.216.203.78
+    options:
+      publish: "3000:3000"
     env:
       clear:
-        MONGODB_URL: mongodb://admin:yourpassword@<%= Kamal::Utils.escape_shell_value("${KAMAL_ACCESSORY_mongodb_ip}") %>:27017/blog-mongodb
+        MONGODB_URL: mongodb://95.216.203.78:27017/blog-mongodb
+        #MONGODB_URL: mongodb://admin:yourpassword@<%= Kamal::Utils.escape_shell_value("${KAMAL_ACCESSORY_mongodb_ip}") %>:27017/blog-mongodb
       secret:
         - RAILS_MASTER_KEY
 
